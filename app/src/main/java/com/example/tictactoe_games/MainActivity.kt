@@ -10,7 +10,7 @@ import kotlin.properties.Delegates
 class MainActivity : AppCompatActivity() {
 
     private var isPlay = false
-    private var isYou by Delegates.notNull<Boolean>()
+    private var isPlayer1 by Delegates.notNull<Boolean>()
 
     private lateinit var playBtn : Button
     private lateinit var gameResultTV : TextView
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun playGame() {
-        isYou = true
+        isPlayer1 = true
         gameResultTV.visibility = TextView.INVISIBLE
         playBtn.visibility = Button.INVISIBLE
         initOnclick()
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     private fun insertItem(item : ImageView, i: Int, j: Int) {
 
 
-        if (isYou){
+        if (isPlayer1){
             board[i][j] = 1
             item.setImageResource(R.drawable.x_icon)
         }else{
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             item.setImageResource(R.drawable.o_icon)
         }
         item.isEnabled = false
-        isYou = !isYou
+        isPlayer1 = !isPlayer1
     }
 
     private fun initOnclick() {

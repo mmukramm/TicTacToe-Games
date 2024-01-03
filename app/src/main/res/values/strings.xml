@@ -2,6 +2,6 @@
     <string name="app_name">TicTacToe-Games</string>
     <string name="primary_title">Tic Tac Toe</string>
     <string name="secondary_title">Game</string>
-    <string name="you_text">: You</string>
-    <string name="opponent_text">: Opponent</string>
+    <string name="player1_text">: Player 1</string>
+    <string name="player2_text">: Player 2</string>
 </resources>
