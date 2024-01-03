@@ -4,4 +4,7 @@
     <string name="secondary_title">Game</string>
     <string name="player1_text">: Player 1</string>
     <string name="player2_text">: Player 2</string>
+    <string name="player_1_win">Player 1 Win</string>
+    <string name="player_2_win">Player 2 Win</string>
+    <string name="play_again">Play Again!</string>
 </resources>
