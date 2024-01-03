@@ -117,6 +117,22 @@ class MainActivity : AppCompatActivity() {
             gameResultTV.text = getString(R.string.player_2_win)
             gameEnd()
         }
+
+        if (isBoardFull() && !winnerRules(1) && !winnerRules(2)) {
+            gameResultTV.text = getString(R.string.draw)
+            gameEnd()
+        }
+    }
+
+    private fun isBoardFull(): Boolean {
+        for (i in 0..2) {
+            for (j in 0..2) {
+                if (board[i][j] == 0) {
+                    return false
+                }
+            }
+        }
+        return true
     }
 
     private fun gameEnd () {
